@@ -1,0 +1,241 @@
+body {
+  /* background-color: #333; */
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  color: #fff;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px; /* Optional: add padding around the container */
+}
+
+.card {
+  /* background-color: #222; */
+  background-color: rgba(26, 28, 33, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0; /* Vertical margin between cards */
+  width: 100%; /* Full width of the container */
+  max-width: 500px; /* Limit card width */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  backdrop-filter: blur(5px);
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logout {
+  float: right;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-info-label {
+  font-weight: bold;
+}
+
+.card-info-value {
+  font-size: 16px;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures that the image does not overflow the circle */
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the circle without distortion */
+}
+
+.user-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.user-info {
+  font-size: 14px;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #a2ff00;
+  transition: width 0.3s ease;
+}
+
+footer {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center;
+  padding: 20px; /* Optional: add padding around the container */
+}
+
+.custom-btn {
+  color: #ffffff;
+  width: 80px;
+  height: 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* 16 */
+.btn-16 {
+  border: 1px solid #ff0000;
+  box-shadow: 0 0 5px #ff0000, 0 0 5px #ff0000 inset;
+}
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.btn-16:hover {
+  box-shadow: rgba(255, 255, 255, 1) -1px -1px, -2px -2px,
+    rgba(255, 255, 255, 1) -3px -3px, rgba(255, 255, 255, 0.9) -4px -4px,
+    rgba(255, 255, 255, 0.8) -5px -5px, rgba(255, 255, 255, 0.7) -6px -6px,
+    rgba(255, 255, 255, 0.6) -7px -7px, rgba(255, 255, 255, 0.5) -8px -8px,
+    rgba(255, 255, 255, 0.4) -9px -9px, rgba(255, 255, 255, 0.3) -10px -10px,
+    rgba(255, 255, 255, 0.2) -11px -11px, rgba(255, 255, 255, 0.1) -12px -12px;
+}
+.btn-16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-16:active {
+  top: 2px;
+}
+
+.custom-btn-gossip {
+  margin-top: 10px;
+  color: #ffffff;
+  width: 150px;
+  height: 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-gossip {
+  border: 1px solid #00f7ff;
+  box-shadow: 0 0 5px #00f7ff, 0 0 5px #00f7ff inset;
+}
+.btn-gossip:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.btn-gossip:hover {
+  box-shadow: rgba(255, 255, 255, 1) -1px -1px, -2px -2px,
+    rgba(255, 255, 255, 1) -3px -3px, rgba(255, 255, 255, 0.9) -4px -4px,
+    rgba(255, 255, 255, 0.8) -5px -5px, rgba(255, 255, 255, 0.7) -6px -6px,
+    rgba(255, 255, 255, 0.6) -7px -7px, rgba(255, 255, 255, 0.5) -8px -8px,
+    rgba(255, 255, 255, 0.4) -9px -9px, rgba(255, 255, 255, 0.3) -10px -10px,
+    rgba(255, 255, 255, 0.2) -11px -11px, rgba(255, 255, 255, 0.1) -12px -12px;
+}
+.btn-gossip:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-gossip:active {
+  top: 2px;
+}

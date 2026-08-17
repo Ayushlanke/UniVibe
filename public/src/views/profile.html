@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../css/profile.css" />
+    <script type="module" src="../utils/checkAuth.js"></script>
+    <script src="../js/profile.js" type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-title" style="color: #a2ff00">Profile</div>
+        <div class="card-content">
+          <div class="user-profile">
+            <div class="user-avatar">
+              <img src="../assets/img/poki.jpg" alt="User Avatar" />
+            </div>
+            <div class="user-name" id="username" style="color: #00f7ff">
+              Username
+            </div>
+            <div class="user-info" id="email" style="color: #00f7ff">
+              example@example.com
+            </div>
+          </div>
+        </div>
+        <div class="logout">
+          <button id="logout" class="custom-btn btn-16">
+            <span>Logout</span>
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <span style="color: #a2ff00">Game</span>
+          Stats and Levels
+        </div>
+        <div class="card-content">
+          <div class="card-info-label">Wins</div>
+          <div class="card-info-label" style="color: #00f7ff">0</div>
+          <div class="card-info-label">Streak</div>
+          <div class="card-info-label" style="color: #00f7ff">9</div>
+          <div class="card-info-label">Balance</div>
+          <div class="card-info-label" style="color: #00f7ff">69</div>
+          <div class="card-info-label">Level</div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width: 60%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <span style="color: #a2ff00">Gossip</span>
+          Stew Stats
+        </div>
+        <div class="card-content">
+          <div class="card-info-label">Gossip Posted</div>
+          <div class="card-info-label" style="color: #00f7ff">2</div>
+          <div class="card-info-label">Level</div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width: 70%"></div>
+          </div>
+          <div class="card-info-label">Achivement</div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width: 80%"></div>
+          </div>
+          <div class="gossip-button">
+            <button
+              class="custom-btn-gossip btn-gossip"
+              onclick="window.location.href='usergossip.html';"
+            >
+              <span>View Posted Gossip</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

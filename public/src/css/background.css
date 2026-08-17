@@ -1,0 +1,165 @@
+/* START: TEMPLATE */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: "proxima-nova-soft", sans-serif;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+
+body .vertical-centered-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+body .vertical-centered-box:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+body .vertical-centered-box .content {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 0;
+}
+
+* {
+  transition: all 0.3s;
+}
+/* END: TEMPLATE */
+
+body {
+  background: #3f3251;
+  background: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+  background: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+  background: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+}
+
+#prism-logo path {
+  /* fill: #20293b; */
+  /* stroke: rgba(255,255,255,1); */
+  /* stroke-width: 1px; */
+}
+
+.loader-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  margin-left: -60px;
+  margin-top: -60px;
+  /* .animation(fade 1.2s infinite ease-in-out); */
+}
+
+.loader-line-mask {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60px;
+  height: 120px;
+  margin-left: -60px;
+  margin-top: -60px;
+  overflow: hidden;
+  transform-origin: 60px 60px;
+  -webkit-mask-image: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  animation: rotate 1.2s infinite linear;
+}
+
+.loader-line {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+#particles-background,
+#particles-foreground {
+  left: -51%;
+  top: -51%;
+  width: 202%;
+  height: 202%;
+  transform: scale3d(0.5, 0.5, 1);
+}
+
+#particles-background {
+  background: #3f3251;
+  background: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+  background: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+  background: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Ensures content is above the particles */
+  padding: 20px;
+  color: white; /* Adjust color as needed */
+}
+
+.loader {
+  width: 55px;
+  aspect-ratio: 1;
+  --g1: conic-gradient(from 90deg at 3px 3px, #0000 90deg, #fff 0);
+  --g2: conic-gradient(from -90deg at 22px 22px, #0000 90deg, #fff 0);
+  background: var(--g1), var(--g1), var(--g1), var(--g2), var(--g2), var(--g2);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  animation: l7 1.5s infinite;
+}
+@keyframes l7 {
+  0% {
+    background-position: 0 0, 0 100%, 100% 100%;
+  }
+  25% {
+    background-position: 100% 0, 0 100%, 100% 100%;
+  }
+  50% {
+    background-position: 100% 0, 0 0, 100% 100%;
+  }
+  75% {
+    background-position: 100% 0, 0 0, 0 100%;
+  }
+  100% {
+    background-position: 100% 100%, 0 0, 0 100%;
+  }
+}

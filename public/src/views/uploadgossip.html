@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Post</title>
+    <script type="module" src="../utils/checkAuth.js"></script>
+    <script type="module" src="../js/uploadgossip.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/gossipbar.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+      <div class="logo">
+        <a href="./homepage.html">
+          <img src="../assets/img/logo.png" alt="Logo" class="logo-image" />
+          Upload
+        </a>
+      </div>
+      <!-- <div class="profile-container">
+        <img
+          onclick="window.location.href = 'Profile.html'"
+          src="../assets/img/poki.jpg"
+          alt="Profile"
+          class="profile-button"
+        />
+      </div> -->
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-bar">
+      <div class="livechat">
+        <img
+          onclick="window.location.href = 'uploadgossip.html'"
+          src="../assets/img/chat1.png"
+          alt="Logo"
+          class="icon-bottom-image"
+        />
+      </div>
+      <div class="icon-bottom">
+        <img
+          onclick="window.location.href = 'gossip.html'"
+          src="../assets/img/create.jpg"
+          alt="Logo"
+          class="icon-bottom-image"
+        />
+      </div>
+
+      <div class="bottom-profile-container" style="padding-left: 20px">
+        <img
+          onclick="window.location.href = 'profile.html'"
+          src="../assets/img/poki.jpg"
+          alt="Profile"
+          class="bottom-profile-button"
+        />
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="container">
+        <div class="main-content">
+          <h1>Create Gossip 😋😝</h1>
+          <div class="post-form">
+            <div class="post-options">
+              <button class="active">Text</button>
+              <button onclick="triggerFileInput()">Upload Images</button>
+              <button onclick="addLink()">Add Link</button>
+            </div>
+            <div class="input-group">
+              <input
+                id="gossipTitle"
+                type="text"
+                placeholder="Title"
+                maxlength="300"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <!-- <div class="toolbar">
+                <button id="bold-btn"><b>B</b></button>
+                <button id="italic-btn"><i>I</i></button>
+                <button id="underline-btn"><u>U</u></button>
+                <button id="strike-btn"><s>S</s></button>
+                <button id="superscript-btn">A<sup>^</sup></button>
+                <button id="subscript-btn">A<sub>v</sub></button>
+                <button id="unordered-list-btn">&#8226;</button>
+                <button id="ordered-list-btn">1.</button>
+              </div> -->
+
+              <div class="input-group">
+                <div
+                  id="editor"
+                  contenteditable="true"
+                  class="editor"
+                  data-placeholder="Type your text here..."
+                ></div>
+              </div>
+              <div id="thumbnailContainer" class="image-thumbnail-container">
+                <!-- Thumbnail boxes will be added here -->
+              </div>
+            </div>
+            <input
+              type="file"
+              id="fileInput"
+              style="display: none"
+              accept="image/*"
+              onchange="addImageFromFile()"
+            />
+            <div class="post-actions">
+              <button id="post" class="custom-btn btn-16">Post</button>
+              <!-- <button id="post" class="post">Post</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="notification" class="notification">
+      <span>Uploaded</span>
+    </div>
+    <!-- <script>
+      // Keep track of formatting state
+      let isBold = false;
+      let isItalic = false;
+      let isUnderline = false;
+      let isStrikeThrough = false;
+
+      // Add event listeners for buttons
+      document.getElementById("bold-btn").addEventListener("click", () => {
+        isBold = !isBold;
+        document.execCommand("bold", false, null);
+        updateButtonState("bold-btn", isBold);
+      });
+
+      document.getElementById("italic-btn").addEventListener("click", () => {
+        isItalic = !isItalic;
+        document.execCommand("italic", false, null);
+        updateButtonState("italic-btn", isItalic);
+      });
+
+      document.getElementById("underline-btn").addEventListener("click", () => {
+        isUnderline = !isUnderline;
+        document.execCommand("underline", false, null);
+        updateButtonState("underline-btn", isUnderline);
+      });
+
+      document.getElementById("strike-btn").addEventListener("click", () => {
+        isStrikeThrough = !isStrikeThrough;
+        document.execCommand("strikeThrough", false, null);
+        updateButtonState("strike-btn", isStrikeThrough);
+      });
+
+      document
+        .getElementById("unordered-list-btn")
+        .addEventListener("click", () => {
+          document.execCommand("insertUnorderedList", false, null);
+        });
+
+      document
+        .getElementById("ordered-list-btn")
+        .addEventListener("click", () => {
+          document.execCommand("insertOrderedList", false, null);
+        });
+
+      // Update button states visually
+      function updateButtonState(buttonId, isActive) {
+        const button = document.getElementById(buttonId);
+        if (isActive) {
+          button.style.backgroundColor = "#ddd"; // Active state styling
+        } else {
+          button.style.backgroundColor = ""; // Default state styling
+        }
+      }
+
+      // Reset the formatting when clicking a button again
+      document.getElementById("editor").addEventListener("keyup", (e) => {
+        if (isBold) document.execCommand("bold", false, null);
+        if (isItalic) document.execCommand("italic", false, null);
+        if (isUnderline) document.execCommand("underline", false, null);
+        if (isStrikeThrough) document.execCommand("strikeThrough", false, null);
+      });
+    </script> -->
+  </body>
+</html>

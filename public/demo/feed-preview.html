@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gossip Stew — Demo Feed</title>
+    <!-- Reuses the real app CSS so the preview is pixel-identical to gossip.html -->
+    <link rel="stylesheet" href="../src/css/usergossip.css" />
+    <link rel="stylesheet" href="../src/css/navbar.css" />
+    <link rel="stylesheet" href="../src/css/sharepopup.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+    </head>
+  <body>
+    
+
+    <!-- Top Navigation Bar (same as real app) -->
+    <div class="top-bar">
+      <div class="logo">
+        <a href="#"><img src="../src/assets/img/logo.png" alt="Logo" class="logo-image" /> Gossips</a>
+      </div>
+    </div>
+
+    <div id="post-sections" class="post-sections">
+      <!-- POST 1 -->
+      <div id="post-1" class="post-container">
+        <div class="post-header">
+          <div class="subreddit-icon">❤</div>
+          <div class="subreddit-info">
+            <span class="subreddit-name">chai_buddy</span>
+            <span class="post-time">• 2 hr ago at 7:42 PM</span>
+          </div>
+        </div>
+        <div class="post-title">Hot take: 9 AM lectures should be illegal 🛏️</div>
+        <div class="post-content">Nobody is emotionally prepared for thermodynamics at 9AM. The professor literally greets us with "good morning, survivors". Surviving WHAT sir, the chairs are velcro.</div>
+        <div class="post-footer">
+          <div class="votes">
+            <button><svg width="20" height="20" viewBox="0 0 64 64"><path fill="#ff0000" d="M58.714,29.977c0,0-0.612,0.75-1.823,1.961S33.414,55.414,33.414,55.414C33.023,55.805,32.512,56,32,56 s-1.023-0.195-1.414-0.586c0,0-22.266-22.266-23.477-23.477s-1.823-1.961-1.823-1.961C3.245,27.545,2,24.424,2,21 C2,13.268,8.268,7,16,7c3.866,0,7.366,1.566,9.899,4.101l0.009-0.009l4.678,4.677c0.781,0.781,2.047,0.781,2.828,0l4.678-4.677 l0.009,0.009C40.634,8.566,44.134,7,48,7c7.732,0,14,6.268,14,14C62,24.424,60.755,27.545,58.714,29.977z"/></svg></button>
+            <span>132</span>
+          </div>
+          <button onclick="document.querySelector('.popup').classList.add('show')">Share</button>
+        </div>
+      </div>
+
+      <!-- POST 2 (with image) -->
+      <div id="post-2" class="post-container">
+        <div class="post-header">
+          <div class="subreddit-icon">❤</div>
+          <div class="subreddit-info">
+            <span class="subreddit-name">canteen_critic</span>
+            <span class="post-time">• 3 hr ago at 6:51 PM</span>
+          </div>
+        </div>
+        <div class="post-title">Rating the canteen burgers so you don't have to 🍔</div>
+        <div class="post-content">The "Double Decker Deluxe" is 60% bread, 30% hope, and 10% mystery patty. 6/10 with tears, 8/10 if you ignore the existence of mayo.</div>
+        <div class="slideshow-container">
+          <div class="mySlidespost-2 fade"><img src="../src/assets/img/img.png" style="width:100%" /></div>
+        </div>
+        <div class="post-footer">
+          <div class="votes">
+            <button><svg width="20" height="20" viewBox="0 0 64 64"><path fill="#ff0000" d="M58.714,29.977c0,0-0.612,0.75-1.823,1.961S33.414,55.414,33.414,55.414C33.023,55.805,32.512,56,32,56 s-1.023-0.195-1.414-0.586c0,0-22.266-22.266-23.477-23.477s-1.823-1.961-1.823-1.961C3.245,27.545,2,24.424,2,21 C2,13.268,8.268,7,16,7c3.866,0,7.366,1.566,9.899,4.101l0.009-0.009l4.678,4.677c0.781,0.781,2.047,0.781,2.828,0l4.678-4.677 l0.009,0.009C40.634,8.566,44.134,7,48,7c7.732,0,14,6.268,14,14C62,24.424,60.755,27.545,58.714,29.977z"/></svg></button>
+            <span>57</span>
+          </div>
+          <button onclick="document.querySelector('.popup').classList.add('show')">Share</button>
+        </div>
+      </div>
+
+      <!-- POST 3 -->
+      <div id="post-3" class="post-container">
+        <div class="post-header">
+          <div class="subreddit-icon">❤</div>
+          <div class="subreddit-info">
+            <span class="subreddit-name">campus_wifi</span>
+            <span class="post-time">• 5 hr ago at 4:20 PM</span>
+          </div>
+        </div>
+        <div class="post-title">Campus wifi when you actually need it 📶💀</div>
+        <div class="post-content">Randomly faster at 2am in the parking lot than at 11am in the main building. The 4G heroics I perform in class should be studied by scientists.</div>
+        <div class="post-footer">
+          <div class="votes">
+            <button><svg width="20" height="20" viewBox="0 0 64 64"><path fill="#ff0000" d="M58.714,29.977c0,0-0.612,0.75-1.823,1.961S33.414,55.414,33.414,55.414C33.023,55.805,32.512,56,32,56 s-1.023-0.195-1.414-0.586c0,0-22.266-22.266-23.477-23.477s-1.823-1.961-1.823-1.961C3.245,27.545,2,24.424,2,21 C2,13.268,8.268,7,16,7c3.866,0,7.366,1.566,9.899,4.101l0.009-0.009l4.678,4.677c0.781,0.781,2.047,0.781,2.828,0l4.678-4.677 l0.009,0.009C40.634,8.566,44.134,7,48,7c7.732,0,14,6.268,14,14C62,24.424,60.755,27.545,58.714,29.977z"/></svg></button>
+            <span>98</span>
+          </div>
+          <button onclick="document.querySelector('.popup').classList.add('show')">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Nav (same as real app) -->
+    <div class="bottom-bar">
+      <div class="livechat"><img onclick="window.location.href = 'livechat-preview.html'" src="../src/assets/img/chat1.png" alt="Logo" class="icon-bottom-image" /></div>
+      <div class="icon-bottom" onclick="window.location.href = 'uploadgossip-preview.html'"><img src="../src/assets/img/create.jpg" alt="Logo" class="icon-bottom-image" /></div>
+      <div class="bottom-profile-container" style="padding-left:20px"><img src="../src/assets/img/poki.jpg" alt="Profile" class="bottom-profile-button" /></div>
+    </div>
+
+    <!-- Fullscreen image viewer -->
+    <div id="fullscreen-container" class="fullscreen-container" onclick="this.style.display='none'">
+      <img id="fullscreen-image" class="fullscreen-image" src="" alt="Full Screen Image" />
+    </div>
+
+    <!-- Share popup (same as real app) -->
+    <div class="popup">
+      <header><span>Share Gossip 🤭</span><div class="close" onclick="this.parentElement.parentElement.classList.remove('show')"><i class="uil uil-times"></i></div></header>
+      <div class="shareContent">
+        <p>Share this link via</p>
+        <ul class="icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-telegram-plane"></i></a>
+        </ul>
+        <p>Or copy link</p>
+        <div class="field">
+          <i class="url-icon uil uil-link"></i>
+          <input type="text" readonly value="https://univibe.web.app/src/views/post.html?id=42" />
+          <button>Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // auto-open share popup when screenshotting with #share
+      if (location.hash === "#share") document.querySelector(".popup").classList.add("show");
+    </script>
+  </body>
+</html>

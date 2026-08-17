@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script type="module">
+    import supabase from "../utils/initialize.js";
+    import { user } from "../utils/user.js";
+
+    async function like() {
+      try {
+        const { data, error } = await supabase.rpc("toggle_like", {
+          p_userid: "2bb0dc17-f308-4038-93d0-5b27a68a4ad7",
+          p_postid: "694a3c40-2237-42a5-b97f-e0428f6e17d5",
+        });
+
+        if (error) {
+          throw error;
+        }
+        console.log("Insert successful:", data);
+      } catch (error) {
+        console.error("Error inserting into gossipbar:", error);
+        return null;
+      }
+    }
+    // like();
+    async function fetchPost() {
+      try {
+        const { data, error } = await supabase.rpc("fetch_posts", {
+          user_uuid: "2bb0dc17-f308-4038-93d0-5b27a68a4ad7",
+          limit_count: 20,
+          offset_count: 0,
+        });
+
+        if (error) {
+          throw error;
+        }
+        console.log(data);
+      } catch (error) {
+        console.error("Error inserting into gossipbar:", error);
+        return null;
+      }
+    }
+    // fetchPost();
+    async function insertIntoGossipbar() {
+      try {
+        const { data, error } = await supabase.rpc("insert_into_gossipbar", {
+          p_uuid: "2bb0dc17-f308-4038-93d0-5b27a68a4ad7",
+          p_title: "title",
+          p_content: "content",
+          p_images: {},
+        });
+
+        if (error) {
+          throw error;
+        }
+
+        console.log("Insert successful:", data);
+        return data;
+      } catch (error) {
+        console.error("Error inserting into gossipbar:", error);
+        return null;
+      }
+    }
+    // insertIntoGossipbar();
+    async function uploadUsername() {
+      try {
+        const { data, error } = await supabase.rpc("insertUsername", {
+          p_id: user.id,
+          p_username: "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+        });
+
+        if (error) {
+          alert("Error checking username:", error.message);
+          return false;
+        }
+
+        return data; // Returns true or false
+      } catch (error) {
+        alert("Unexpected error:", error);
+        return false;
+      }
+    }
+    // uploadUsername();
+    async function checkUsername() {
+      try {
+        const { data, error } = await supabase.rpc("checkUsername", {
+          p_username: "uwu",
+        });
+
+        if (error) {
+          alert("Error checking username:", error.message);
+          return false;
+        }
+        console.log(data);
+      } catch (error) {
+        alert("Unexpected error:", error);
+        return false;
+      }
+    }
+    checkUsername();
+  </script>
+</html>

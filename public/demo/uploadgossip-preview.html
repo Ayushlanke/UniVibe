@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Gossip (Demo)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/css/gossipbar.css" />
+    <link rel="stylesheet" href="../src/css/navbar.css" />
+    <style>
+      .editor { min-height: 120px; }
+    </style>
+  </head>
+  <body>
+    
+
+    <!-- Top Navigation Bar (same as real app) -->
+    <div class="top-bar">
+      <div class="logo">
+        <a href="feed-preview.html"><img src="../src/assets/img/logo.png" alt="Logo" class="logo-image" /> Upload</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="container">
+        <div class="main-content">
+          <h1>Create Gossip 😋😝</h1>
+          <div class="post-form">
+            <div class="post-options">
+              <button class="active">Text</button>
+              <button>Upload Images</button>
+              <button>Add Link</button>
+            </div>
+            <div class="input-group">
+              <input type="text" placeholder="Title" maxlength="300" value="Wholesome: the stray cat outside Block C has a fan club now" />
+            </div>
+            <div class="input-group">
+              <div class="input-group">
+                <div id="editor" contenteditable="true" class="editor">
+                  Someone made a tiny cardboard crown and now she sits on the bench like the Queen she is. Who is leaving her snacks? Because I love you. 👑🐱
+                </div>
+              </div>
+              <div id="thumbnailContainer" class="image-thumbnail-container"></div>
+            </div>
+            <div class="post-actions">
+              <button id="post" class="custom-btn btn-16">Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="notification" class="notification"><span>Uploaded</span></div>
+  </body>
+</html>

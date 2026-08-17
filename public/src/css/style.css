@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  background-color: #1c1c1c;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.toolbar button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.toolbar button:hover {
+  background-color: #333;
+}
+
+.editor {
+  padding: 10px;
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 5px;
+  min-height: 150px;
+  outline: none;
+}
+
+.editor img {
+  max-width: 100%; /* Set to 100% of the editor's width */
+  max-height: 300px; /* Set a maximum height */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.output {
+  padding: 10px;
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 5px;
+  min-height: 150px;
+  outline: none;
+}
+
+.output img {
+  max-width: 100%; /* Set to 100% of the editor's width */
+  max-height: 300px; /* Set a maximum height */
+  height: auto; /* Maintain aspect ratio */
+}
+
+a {
+  color: rgb(0, 213, 255); /* Set link color */
+  text-decoration: underline; /* Optional: underline the link */
+}

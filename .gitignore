@@ -1,0 +1,5 @@
+node_modules/
+.env
+.firebase/**/*.cache
+firebase-debug.log
+public/src/utils/config.js

@@ -1,0 +1,394 @@
+body {
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-width: 600px;
+  margin-top: -150px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.main-content h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #ffffff; /* Bold white for the main title */
+}
+
+.post-form {
+  background-color: #1a2236; /* Dark navy blue for the form */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.post-options {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.post-options button {
+  background-color: #2a344f; /* Even darker navy for inactive buttons */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.post-options button.active {
+  background-color: #1e88e5; /* Bright blue for active state */
+  color: #ffffff;
+}
+
+.post-options button:hover {
+  background-color: #364166; /* Darker shade for hover state */
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input[type="text"],
+.input-group textarea {
+  width: 100%; /* Ensure input and textarea take full width */
+  background-color: #10182b; /* Dark navy background for inputs */
+  border: 1px solid #2a344f; /* Border matching button colors */
+  color: #ffffff; /* Bright white text */
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+.input-group textarea {
+  height: 150px;
+  resize: none;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.post-actions .save-draft,
+.post-actions .post {
+  background-color: #2a344f; /* Darker navy for buttons */
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.post-actions .save-draft {
+  margin-right: 10px;
+}
+
+.post-actions .post {
+  background-color: #1e88e5; /* Bright blue for post button */
+  color: #ffffff;
+}
+
+.post-actions .save-draft:hover,
+.post-actions .post:hover {
+  background-color: #364166; /* Slightly lighter on hover */
+}
+
+.post-actions .post:hover {
+  background-color: #1565c0; /* Darker blue for hover on post */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    min-width: 400px;
+  }
+
+  .sidebar {
+    display: none; /* Hide the sidebar on mobile */
+  }
+
+  .main-content {
+    padding: 10px;
+    box-shadow: none; /* Remove shadow for simplicity */
+  }
+
+  .post-form {
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .post-options {
+    flex-direction: row; /* Arrange buttons in a row */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+  }
+
+  .post-options button {
+    margin-right: 10px;
+    margin-bottom: 10px; /* Add margin to separate buttons */
+    width: auto; /* Allow buttons to shrink or expand as needed */
+    padding: 12px; /* Increase padding for easier tapping */
+  }
+
+  .custom-btn.btn-16 {
+    width: auto;
+  }
+
+  .input-group {
+    margin-bottom: 15px; /* Reduce margin to avoid overflow */
+  }
+
+  .input-group input[type="text"],
+  .input-group textarea {
+    width: 100%; /* Ensure input and textarea take full width */
+    padding: 15px; /* Increase padding for better touch interaction */
+  }
+
+  .post-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .post-actions .save-draft,
+  .post-actions .post {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px; /* Add margin to separate buttons on mobile */
+  }
+
+  .post-actions .save-draft {
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .post-actions .post {
+    margin-bottom: 0;
+  }
+}
+
+.toolbar button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.toolbar button:hover {
+  background-color: transparent;
+}
+
+.editor {
+  width: 100%; /* Ensure input and textarea take full width */
+  background-color: #10182b; /* Dark navy background for inputs */
+  border: 1px solid #2a344f; /* Border matching button colors */
+  color: #ffffff; /* Bright white text */
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box; /* Include padding and border in width */
+  height: 200px;
+  overflow-y: scroll;
+  scrollbar-color: rgb(255, 255, 255) rgba(0, 0, 0, 0);
+
+  /* min-height: 150px; */
+  /* border: 1px solid #ccc; */
+  /* padding: 10px; */
+  /* box-sizing: border-box; */
+  /* overflow: hidden; */
+  /* overflow: scroll; */
+  resize: none; /* Prevent manual resizing */
+  /* white-space: pre-wrap; */
+  word-wrap: break-word;
+}
+
+.editor img {
+  max-width: 100%; /* Set to 100% of the editor's width */
+  max-height: 300px; /* Set a maximum height */
+  height: auto; /* Maintain aspect ratio */
+}
+
+a {
+  color: rgb(0, 213, 255); /* Set link color */
+  text-decoration: underline; /* Optional: underline the link */
+}
+
+.thumbnail-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.image-thumbnail {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.image-thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+.remove-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.remove-button:hover {
+  background: #d32f2f;
+}
+
+#editor {
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 100px;
+  /* color: black; */
+}
+
+#editor[data-placeholder]:empty::before {
+  content: attr(data-placeholder);
+  color: grey;
+}
+
+.custom-btn {
+  color: #ffffff;
+  width: 130px;
+  height: 45px;
+  font-family: "Lato", sans-serif;
+  font-weight: 1000;
+  font-size: large;
+  background: rgba(66, 65, 65, 0.473);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text horizontally */
+  border: 1px solid #fff;
+  box-sizing: border-box; /* Include border and padding in width and height */
+}
+
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+
+.btn-16:hover {
+  box-shadow: rgba(255, 255, 255, 1) -1px -1px, -2px -2px,
+    rgba(255, 255, 255, 1) -3px -3px, rgba(255, 255, 255, 0.9) -4px -4px,
+    rgba(255, 255, 255, 0.8) -5px -5px, rgba(255, 255, 255, 0.7) -6px -6px,
+    rgba(255, 255, 255, 0.6) -7px -7px, rgba(255, 255, 255, 0.5) -8px -8px,
+    rgba(255, 255, 255, 0.4) -9px -9px, rgba(255, 255, 255, 0.3) -10px -10px,
+    rgba(255, 255, 255, 0.2) -11px -11px, rgba(255, 255, 255, 0.1) -12px -12px;
+}
+
+.btn-16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn-16:active {
+  top: 2px;
+}
+
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: #ffffff #0000;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+#notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none; /* Hidden by default */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#notification.show {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0); /* Slide in */
+}
+
+#notification.hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) translateY(-20px); /* Slide out */
+}

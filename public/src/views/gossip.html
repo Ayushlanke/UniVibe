@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gossip</title>
+    <link rel="stylesheet" href="../css/post.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/sharepopup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+    />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+      <div class="logo">
+        <a href="./homepage.html">
+          <img src="../assets/img/logo.png" alt="Logo" class="logo-image" />
+          Gossips
+        </a>
+      </div>
+      <!-- <div class="profile-container">
+        <img
+          onclick="window.location.href = 'Profile.html'"
+          src="../assets/img/poki.jpg"
+          alt="Profile"
+          class="profile-button"
+        />
+      </div> -->
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-bar">
+      <div class="livechat">
+        <img
+          onclick="window.location.href = 'uploadgossip.html'"
+          src="../assets/img/chat1.png"
+          alt="Logo"
+          class="icon-bottom-image"
+        />
+      </div>
+      <div class="icon-bottom">
+        <img
+          onclick="window.location.href = 'uploadgossip.html'"
+          src="../assets/img/create.jpg"
+          alt="Logo"
+          class="icon-bottom-image"
+        />
+      </div>
+
+      <div class="bottom-profile-container" style="padding-left: 20px">
+        <img
+          onclick="window.location.href = 'profile.html'"
+          src="../assets/img/poki.jpg"
+          alt="Profile"
+          class="bottom-profile-button"
+        />
+      </div>
+    </div>
+
+    <div id="post-sections" class="post-sections"></div>
+
+    <div
+      id="fullscreen-container"
+      class="fullscreen-container"
+      onclick="hideFullScreenImage()"
+    >
+      <img
+        id="fullscreen-image"
+        class="fullscreen-image"
+        src=""
+        alt="Full Screen Image"
+      />
+    </div>
+    <!-- Share -->
+    <div class="popup">
+      <header>
+        <span>Share Gossip 🤭</span>
+        <div class="close"><i class="uil uil-times"></i></div>
+      </header>
+      <div class="shareContent">
+        <p>Share this link via</p>
+        <ul class="icons">
+          <a id="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a id="x" href="#"><i class="fab fa-twitter"></i></a>
+          <a id="instagram" href="#"><i class="fab fa-instagram"></i></a>
+          <a id="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a>
+          <a id="telegram" href="#"><i class="fab fa-telegram-plane"></i></a>
+        </ul>
+        <p>Or copy link</p>
+        <div class="field">
+          <i class="url-icon uil uil-link"></i>
+          <input
+            id="copyLink"
+            type="text"
+            readonly
+            value="https://noice75.github.io/Superbase_Webpage/src/views/post.html#"
+          />
+          <button>Copy</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script></script>
+  <script type="module" src="../js/post.js"></script>
+</html>

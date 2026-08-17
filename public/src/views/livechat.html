@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Chat with Supabase</title>
+    <link rel="stylesheet" href="../css/livechat.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+      <div class="logo">
+        <a href="./homepage.html">
+          <img src="../assets/img/logo.png" alt="Logo" class="logo-image" />
+          Live Chat
+        </a>
+      </div>
+      <div class="profile-container">
+        <a href="./profile.html">
+          <img
+            id="profileButton"
+            src="../assets/img/poki.jpg"
+            alt="Profile"
+            class="profile-button"
+          />
+        </a>
+      </div>
+    </div>
+    <div id="chat-container">
+      <div id="chatbox">
+        <div id="loader" class="loader"></div>
+      </div>
+
+      <div id="message-input">
+        <input
+          type="text"
+          id="message"
+          placeholder="Type a message..."
+          autocomplete="off"
+        />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+
+    <script src="../js/livechat.js" type="module"></script>
+  </body>
+</html>

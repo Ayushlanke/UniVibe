@@ -1,0 +1,10 @@
+{
+  "name": "univibe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UniVibe — college social & gossip platform (vanilla JS SPA on Supabase, deployed via Firebase Hosting)",
+  "scripts": {
+    "build": "echo \"Static site — nothing to bundle. See public/ for source.\" && exit 0",
+    "serve": "python -m http.server 5401 -d public"
+  }
+}
