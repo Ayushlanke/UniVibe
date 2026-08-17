@@ -7,8 +7,6 @@ A mobile-first social app for college campuses. Students post **fun/relatable ca
 ![Firebase Hosting](https://img.shields.io/badge/Hosting-Firebase%20Hosting-DD2C00?logo=firebase&logoColor=fff&labelColor=222)
 ![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?logo=githubactions&logoColor=fff&labelColor=222)
 
-> **Live URL:** `https://univibe.web.app` (static frontend; the Supabase instance is what gets re-created, see [Backend setup](#-getting-started)).
-
 ---
 
 ## Screenshots
